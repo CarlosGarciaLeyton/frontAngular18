@@ -27,10 +27,10 @@ export class HomeComponent implements OnInit {
             this.content = `Error status: ${err.status} - ${err.statusText}`;
           }
         }
-      
+
         else {
           this.content = `Error with status: ${err.status}`;
-        
+
         }
       }
     });

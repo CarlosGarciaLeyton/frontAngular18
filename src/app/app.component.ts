@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { StorageService } from './_service/storage.service';
 import { AuthService } from './_service/auth.service';
-import { error } from 'console';
+
+//import { error } from 'console';
 
 @Component({
   selector: 'app-root',

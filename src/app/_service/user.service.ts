@@ -9,22 +9,22 @@ const API_URL = 'http://localhost:8080/api/test/'
 })
 export class UserService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  getPublicContent (): Observable <any>{
-    return this.http.get(API_URL + 'all', {responseType : 'text'});
-    
+  getPublicContent(): Observable<any> {
+    return this.http.get(API_URL + 'all', { responseType: 'text' });
+
   }
 
-  getUserBoard (){
-    return this.http.get(API_URL + 'user', {responseType : 'text'});
+  getUserBoard() {
+    return this.http.get(API_URL + 'user', { responseType: 'text' });
   }
 
-  getAdminBoard (){
-    return this.http.get(API_URL + 'admin', {responseType : 'text'});
+  getAdminBoard() {
+    return this.http.get(API_URL + 'admin', { responseType: 'text' });
   }
 
-  getBodegaBoard (){
-    return this.http.get(API_URL + 'bodega', {responseType : 'text'});
+  getBodegaBoard() {
+    return this.http.get(API_URL + 'bodega', { responseType: 'text' });
   }
 }
