@@ -12,14 +12,14 @@ import { NgClass } from '@angular/common';
   styleUrl: './login.component.css'
 })
 export class LoginComponent implements OnInit {
-  form: any = {
+   form: any = {
     userName: null,
     password: null
   };
-  isLoggedIn = false;
-  isLoginFailed = false;
-  errorMessage = '';
-  roles: string[] = [];
+   isLoggedIn = false;
+   isLoginFailed = false;
+   errorMessage = '';
+   roles: string[] = [];
 
   constructor(private authService: AuthService, private storageService: StorageService) { }
 
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  onSubmit(): void {
+   public  onSubmit(): void {
     const { userName, password } = this.form;
 
     this.authService.login(userName, password).subscribe({
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  reloadPage(): void {
+  public reloadPage(): void {
     window.location.reload();
   }
 

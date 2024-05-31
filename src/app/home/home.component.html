@@ -1,5 +1,28 @@
 <div class="container">
     <header class="jumbotron">
-        <p> {{content}}</p>
+
+        @for ( contents of content; track contents.id) {
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col"> #</th>
+                    <th scope="col"> Nombre</th>
+                    <th scope="col"> Comuna</th>
+                    <th scope="col"> Estado</th>
+                    <th scope="col"> Accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">{{contents.id}} </th>
+                    <td>{{contents.nombre}}</td>
+                    <td>{{contents.comuna}}</td>
+                    <td>{{contents.estado}}</td>
+                </tr>
+            </tbody>
+        </table>
+        }@empty {
+        lista vacia
+        }
     </header>
 </div>
