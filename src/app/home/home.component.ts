@@ -19,6 +19,8 @@ export class HomeComponent implements OnInit {
       if (response) {
         this.content = response.data;
         console.log("aca esta:---->", this.content[0]);
+      }else{
+        console.log ('servicio no disponible');
       }
     });
   }
