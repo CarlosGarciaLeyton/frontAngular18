@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
 const API_URL = 'https://huachitos.cl/api/animales/comuna/127'
 //const API_URL = 'http://localhost:8080/api/v1/'
 
@@ -17,8 +18,6 @@ export class UserService {
   }*/
   getPublicContent() : Observable<any>{
     return this.http.get(API_URL);
-     
-
   }
 
   getUserBoard(): Observable<any> {
